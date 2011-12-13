@@ -4,3 +4,4 @@ module.exports = (path) ->
 	require("#{__dirname}/bootstrap").boot app, path
 
 	app.listen(3000)
+	console.log 'Server starting'
