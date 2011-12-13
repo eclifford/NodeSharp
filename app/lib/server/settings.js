@@ -5,8 +5,7 @@
     cookieMaxAge: oneYear,
     publicDir: 'public',
     cookieSecret: 'my.secret.phrase',
-    viewEngine: 'jade',
-    port: '3000'
+    viewEngine: 'jade'
   };
   exports.development = {
     db: 'mongodb://eclifford:reich33@staff.mongohq.com:10096/thevideowar',
@@ -14,11 +13,14 @@
     errorHandling: {
       dumpExceptions: true,
       showStack: true
-    }
+    },
+    port: '3000'
   };
   exports.production = {
+    db: 'mongodb://eclifford:reich33@staff.mongohq.com:10096/thevideowar',
     staticMaxAge: oneYear,
-    errorHandling: {}
+    errorHandling: {},
+    port: '80'
   };
   exports.test = {};
 }).call(this);

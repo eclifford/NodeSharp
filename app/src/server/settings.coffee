@@ -5,7 +5,6 @@ exports.common =
   publicDir:        'public'
   cookieSecret:     'my.secret.phrase'
   viewEngine:       'jade'
-  port:             '3000'
 
 exports.development = 
   db:                     'mongodb://eclifford:reich33@staff.mongohq.com:10096/thevideowar'
@@ -13,9 +12,12 @@ exports.development =
   errorHandling:
     dumpExceptions:       true
     showStack:            true      
+  port:                   '3000'
       
 exports.production = 
-  staticMaxAge:     oneYear
-  errorHandling:    {}    
+  db:                     'mongodb://eclifford:reich33@staff.mongohq.com:10096/thevideowar'
+  staticMaxAge:           oneYear
+  errorHandling:          {}   
+  port:                   '80' 
 
 exports.test = {}
