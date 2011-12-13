@@ -1,0 +1,16 @@
+<div class='commentAuthorImage' style='float: left; margin-right: 12px'>
+	<% if(user) { %>
+	<img src='http://graph.facebook.com/<%= user.facebookId %>/picture'/>
+	<% } %>
+</div>
+<div class='commentAuthor' style='font-weight: bold'>
+	<% if(user) { %>
+		<%= user.name %>
+	<% } %>
+</div>
+<div class='commentDate'>
+	<%= dateCreated %>
+</div>
+<div class='commentBody'>
+	<%= body %>
+</div>

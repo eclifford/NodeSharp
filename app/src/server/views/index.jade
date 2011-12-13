@@ -1,0 +1,24 @@
+div#left
+
+div#right
+
+script
+	var videos = new App.Collections.Videos();
+	videos.fetch({
+		success: function(videos) {
+			var videoView1 = new App.Views.VideoView({
+				el: '#left',
+				model: videos.at(Math.floor(Math.random()*videos.models.length))
+			});
+
+			var videoView2 = new App.Views.VideoView({
+				el: '#right',
+				model: videos.at(Math.floor(Math.random()*videos.models.length))
+			});		
+		}
+	});
+
+
+
+
+

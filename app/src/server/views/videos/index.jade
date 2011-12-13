@@ -1,0 +1,50 @@
+table
+	- each video in videos
+		tr
+			th 
+				| Title
+			th
+				| VideoId
+			th
+				| Date Created
+			th 
+				| Date Updated
+			th
+				| Votes
+			th
+				| Comments
+			th
+				| Remove
+		tr
+			td 
+				= video.title
+			td
+				= video.videoId
+			td
+				= video.dateCreated
+			td
+				= video.dateUpdated
+			td
+				= video.votes.length
+			td
+				= video.comments.length
+			td
+				a(href='/videos/'+video._id, class='delete')
+					| DELETE
+
+script
+	$(function() {
+		$('a.delete').click(function(e) {
+			e.preventDefault();
+			$.ajax({
+				type: 'DELETE',
+				url: $(this).attr('href'),
+				success: function(){
+					window.location.reload();
+				}
+			});
+		})
+	});
+
+
+

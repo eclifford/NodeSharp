@@ -1,0 +1,25 @@
+!!!
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/assets/all.css')
+		link(rel='stylesheet', href='/assets/vendor.css')
+		script(src='/assets/vendor.js')
+		script(src='/assets/backbone.js')
+		script(src='/assets/templates.jst')
+	body
+		div#container 
+			div#header 
+				a(href='/')
+					img(src='/images/redbull.png')
+				div#loginStatus
+					- if(everyauth.loggedIn)
+						img(src="http://graph.facebook.com/#{everyauth.facebook.user.id}/picture", style='border: solid 1px #ccc')
+						//- p= JSON.stringify(everyauth.facebook.user)
+						br
+						a(href='/logout') Logout
+
+					- else
+						a(href='/auth/facebook') Login
+			div#content!= body
+			div#footer

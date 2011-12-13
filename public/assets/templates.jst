@@ -1,0 +1,5 @@
+window.JST = {};
+window.JSTCompile = _.template;
+window.JST["partials/comment"] = JSTCompile("<div class='commentAuthorImage' style='float: left; margin-right: 12px'>\n	<% if(user) { %>\n	<img src='http://graph.facebook.com/<%= user.facebookId %>/picture'/>\n	<% } %>\n</div>\n<div class='commentAuthor' style='font-weight: bold'>\n	<% if(user) { %>\n		<%= user.name %>\n	<% } %>\n</div>\n<div class='commentDate'>\n	<%= dateCreated %>\n</div>\n<div class='commentBody'>\n	<%= body %>\n</div>");
+
+window.JST["partials/video"] = JSTCompile("<div class='video'>\n	<div class='votes'><%= votes.length %></div>\n	<iframe width=\"300\" height=\"200\" src=\"http://www.youtube.com/embed/<%= videoId %>\" frameborder=\"0\" allowfullscreen></iframe>\n	<textarea id='txtAddComment' type='text' width='300px' /><br />\n	<input id='btnAddComment' type='button' value='Add Comment' /><br />\n	<input id=\"btnAddVote\" type=\"button\" value=\"Vote\" />\n	<div class='comments'></div>\n</div>");
