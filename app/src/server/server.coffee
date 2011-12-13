@@ -3,5 +3,5 @@ module.exports = (path) ->
 	app = module.exports = express.createServer()
 	require("#{__dirname}/bootstrap").boot app, path
 
-	app.listen(3000)
+	app.listen(80)
 	console.log 'Server starting'
