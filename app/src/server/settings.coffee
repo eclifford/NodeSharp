@@ -8,7 +8,7 @@ exports.common =
   port:             '3000'
 
 exports.development = 
-  db:                     'mongodb://localhost/redbull'
+  db:                     'mongodb://eclifford:reich33@staff.mongohq.com:10096/thevideowar'
   staticMaxAge:           null
   errorHandling:
     dumpExceptions:       true
