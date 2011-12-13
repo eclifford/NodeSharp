@@ -2,7 +2,7 @@
 logs/
 tmp/
 .monitor
-/node_modules
+node_modules/
 
 # OS generated files #
 ######################
