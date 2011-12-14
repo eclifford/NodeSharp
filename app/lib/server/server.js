@@ -111,7 +111,7 @@
       }
     };
     return app.configure("development", function() {
-      return nap.watch(assets, 'public/assets');
+      return nap.package(assets, 'public/assets');
     });
   };
 }).call(this);

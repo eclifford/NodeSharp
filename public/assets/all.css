@@ -55,7 +55,7 @@ body {
   margin: 0;
   font-size: 13px;
   line-height: 1.231;
-  background-color: #3c3c3c;
+  background-color: #0e0e0e;
 }
 body,
 button,
@@ -63,7 +63,7 @@ input,
 select,
 textarea {
   font-family: sans-serif;
-  color: #fff;
+  color: #2c2c2c;
 }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -84,10 +84,10 @@ textarea {
  Links
  ========================================================================== */
 a {
-  color: #00e;
+  color: #dd013f;
 }
 a:visited {
-  color: #551a8b;
+  color: #dd013f;
 }
 a:hover {
   color: #06e;
@@ -252,6 +252,7 @@ textarea {
   margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
+  width: 100%;
 }
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
@@ -312,7 +313,7 @@ input:valid,
 textarea:valid,
 input:invalid,
 textarea:invalid {
-  background-color: #f0dddd;
+  background-color: #ccc;
 }
 /* =============================================================================
  Tables
@@ -456,15 +457,17 @@ td {
 #container {
   margin-left: auto;
   margin-right: auto;
-  width: 1024px;
+  width: 700px;
 }
 #header {
-  width: 1024px;
+  width: 700px;
   position: relative;
   float: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 #content {
-  width: 800px;
+  width: 700px;
   position: relative;
 }
 #loginStatus {
@@ -478,4 +481,18 @@ td {
   background-color: #1b1b1b;
   padding: 10px;
   margin-bottom: 3px;
+  color: #fff;
+}
+.title {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 18px;
+  color: #dd013f;
+}
+.votes {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 18px;
+  color: #dd013f;
+  font-weight: bold;
+  background-color: #2c2c2c;
+  padding: 5px;
 }

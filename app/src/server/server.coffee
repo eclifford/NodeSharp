@@ -103,8 +103,8 @@ assetManager = (app) ->
       templates: [
         'app/src/client/templates/**/*.html'
       ]
-      
+
   app.configure "development", ->
-    nap.watch assets, 'public/assets'
+    nap.package assets, 'public/assets'
 
 

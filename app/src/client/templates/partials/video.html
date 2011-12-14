@@ -1,5 +1,6 @@
 <div class='video'>
-	<div class='votes'><%= votes.length %></div>
+	<div class='title' style='float: left'><%= title %></div>
+	<div class='votes' style='float: right'><%= votes.length %></div>
 	<iframe width="300" height="200" src="http://www.youtube.com/embed/<%= videoId %>" frameborder="0" allowfullscreen></iframe>
 	<textarea id='txtAddComment' type='text' width='300px' /><br />
 	<input id='btnAddComment' type='button' value='Add Comment' /><br />
