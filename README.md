@@ -6,8 +6,8 @@ My goal with this project was to use as many new technologies as possible to mak
 
 # Project Structure
 Below is the app folder structure. 
-```javascript
-		/app
+
+    /app
 			/lib                   # Compiled version of /src
 			/src
 				client
@@ -41,7 +41,7 @@ Below is the app folder structure.
 				/vendor              # Css files compiled into /assets/all.css
 		Cakefile                 # Packaging scripts / testrunner
 		server.js                # Entry point into the app
-```
+
 
 # Features
 
