@@ -1,6 +1,8 @@
 (function() {
   var VideoManager;
+
   VideoManager = require('../models/videoManager');
+
   module.exports = function(app) {
     app.get("/comments/:videoId", function(req, res) {
       var videoManager;
@@ -18,4 +20,5 @@
       });
     });
   };
+
 }).call(this);

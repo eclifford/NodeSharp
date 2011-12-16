@@ -1,0 +1,9 @@
+div.video
+	div.title(style='float: left')
+		= title
+	div.votes(style='float: right')
+		= votes.length
+	iframe(width: 300, height=200, src='http://www.youtube.com/embed/#{ videoId }', frameborder=0, allowfullscreen)
+	input#btnAddComment(type='button', value='Add Comment')
+	input#btnAddVote(type='button', value='Vote')
+	div.comments

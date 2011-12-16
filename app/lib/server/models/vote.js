@@ -1,7 +1,10 @@
 (function() {
   var Schema, VoteSchema, mongoose;
+
   mongoose = require('mongoose');
+
   Schema = mongoose.Schema;
+
   VoteSchema = new Schema({
     ip: String,
     user: {
@@ -13,5 +16,7 @@
       "default": Date.now()
     }
   });
+
   module.exports.VoteSchema = VoteSchema;
+
 }).call(this);

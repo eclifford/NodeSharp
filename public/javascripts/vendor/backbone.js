@@ -11,7 +11,7 @@
 
   // Save a reference to the global object.
   var root = this;
-
+ 
   // Save the previous value of the `Backbone` variable.
   var previousBackbone = root.Backbone;
 
@@ -22,8 +22,8 @@
     Backbone = exports;
   } else {
     Backbone = root.Backbone = {};
-  }
-
+  } 
+  
   // Current version of the library. Keep in sync with `package.json`.
   Backbone.VERSION = '0.5.3';
 

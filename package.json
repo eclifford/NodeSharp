@@ -20,7 +20,11 @@
     "file": "~0.1.1",
     "mongoose": "~2.4.2",
     "settings": "0.0.2",
-    "underscore": "~1.2.3"
+    "underscore": "~1.2.3",
+    "cluster": "~0.7.7",
+    "walk": "~2.0.2",
+    "stylus": "~0.20.0",
+    "nib": "~0.3.1"
   },
   "devDependencies": {}
 }

@@ -1,4 +1,4 @@
-(function() {
+
   window.TagListView = Backbone.View.extend({
     el: "ul.tagcloud",
     initialize: function() {
@@ -32,6 +32,7 @@
       return $(this.el).append(view.render().el);
     }
   });
+
   window.TagView = Backbone.View.extend({
     tagName: 'li',
     initialize: function() {
@@ -43,4 +44,3 @@
       return this;
     }
   });
-}).call(this);

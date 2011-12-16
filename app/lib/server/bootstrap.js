@@ -39,15 +39,6 @@
         'production': [nap.yuiCssMin]
       },
       vendor: ['public/stylesheets/vendor/jquery-tags/jquery.tagsinput.css']
-    },
-    jst: {
-      preManipulate: {
-        '*': [nap.packageJST]
-      },
-      postManipulate: {
-        '*': [nap.prependJST("_.template")]
-      },
-      templates: ['app/src/client/templates/**/*.html']
     }
   };
   bootApplication = function(app, path) {

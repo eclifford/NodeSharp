@@ -1,5 +1,4 @@
-(function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
   App.Views.PostView = Backbone.View.extend({
     className: 'post',
     displayComments: true,
@@ -19,6 +18,7 @@
       return this;
     }
   });
+
   App.Views.PostNewView = Backbone.View.extend({
     model: new App.Models.Post,
     events: {
@@ -41,6 +41,7 @@
       });
     }
   });
+
   App.Views.PostListView = Backbone.View.extend({
     initialize: function() {
       _.bindAll(this, 'render');
@@ -52,9 +53,10 @@
       return this;
     },
     addAll: function() {
-      return _.each(this.collection.models, __bind(function(post) {
-        return this.addOne(post);
-      }, this));
+      var _this = this;
+      return _.each(this.collection.models, function(post) {
+        return _this.addOne(post);
+      });
     },
     addOne: function(post) {
       var view;
@@ -65,6 +67,7 @@
       return $(this.el).append(view.el);
     }
   });
+
   App.Views.CommentListView = Backbone.View.extend({
     tagName: 'section',
     className: 'comments',
@@ -72,17 +75,19 @@
       return this.render();
     },
     render: function() {
+      var _this = this;
       console.log('commentListViewRender');
-      _.each(this.collection, __bind(function(comment) {
+      _.each(this.collection, function(comment) {
         var view;
         view = new App.Views.CommentView({
           model: comment
         });
-        return $(this.el).append(view.render().el);
-      }, this));
+        return $(_this.el).append(view.render().el);
+      });
       return this;
     }
   });
+
   App.Views.CommentView = Backbone.View.extend({
     className: 'comment',
     initialize: function() {
@@ -93,4 +98,3 @@
       return this;
     }
   });
-}).call(this);

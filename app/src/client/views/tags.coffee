@@ -1,6 +1,6 @@
 window.TagListView = Backbone.View.extend(
   el: "ul.tagcloud" 
-
+  
   initialize: ->
 
     _.bindAll this, "render", "appendItem"

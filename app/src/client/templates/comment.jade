@@ -1,0 +1,10 @@
+div.commentAuthorImage(style='float: left; margin-right: 12px')
+	- if(user)
+		img(src="http://graph.facebook.com/#{user.facebookId}/picture", style='border: solid 1px #ccc')
+div.commentAuthor(style='font-weight: bold')
+	- if(user)
+		= user.name
+div.commentDate 
+	= dateCreated
+div.commentBody
+	= body

@@ -1,4 +1,4 @@
-(function() {
+
   window.ImageView = Backbone.View.extend({
     className: "cube",
     template: $("#image-template"),
@@ -20,4 +20,3 @@
       return this;
     }
   });
-}).call(this);

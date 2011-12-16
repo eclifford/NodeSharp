@@ -1,6 +1,8 @@
 (function() {
   var VideoManager;
+
   VideoManager = require('../models/videoManager');
+
   module.exports = function(app) {
     app.get("/videos.:format?", function(req, res) {
       var videoManager;
@@ -61,4 +63,5 @@
       });
     });
   };
+
 }).call(this);

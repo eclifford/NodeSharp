@@ -1,9 +1,14 @@
 (function() {
   var CommentSchema, Schema, VideoSchema, VoteSchema, mongoose;
+
   mongoose = require('mongoose');
+
   Schema = mongoose.Schema;
+
   CommentSchema = require('./comment').CommentSchema;
+
   VoteSchema = require('./vote').VoteSchema;
+
   VideoSchema = new Schema({
     title: String,
     videoId: String,
@@ -22,5 +27,7 @@
       ref: 'User'
     }
   });
+
   module.exports.VideoSchema = VideoSchema;
+
 }).call(this);

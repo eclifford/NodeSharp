@@ -1,4 +1,4 @@
-(function() {
+
   module.exports.accounts = [
     {
       username: 'eclifford',
@@ -10,4 +10,3 @@
       role: 'admin'
     }
   ];
-}).call(this);

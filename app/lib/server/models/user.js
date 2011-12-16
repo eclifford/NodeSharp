@@ -1,7 +1,10 @@
 (function() {
   var Schema, UserSchema, mongoose;
+
   mongoose = require('mongoose');
+
   Schema = mongoose.Schema;
+
   UserSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -22,5 +25,7 @@
       "default": 'user'
     }
   });
+
   module.exports.UserSchema = UserSchema;
+
 }).call(this);

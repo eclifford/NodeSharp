@@ -12,8 +12,9 @@ App.Views.VideoView = Backbone.View.extend(
   initialize: ->
     _.bindAll this, "render", "addComment"
     @model.bind 'change', @render
-    $(@el).html window.JST['partials/video'](@model.toJSON())
+    $(@el).html window.JST['video'](@model.toJSON())
 
+    
     @comments = new App.Collections.Comments()
     @comments.url = '/comments/' + @model.get('_id')
     @comments.fetch
@@ -99,7 +100,7 @@ App.Views.CommentView = Backbone.View.extend(
     _.bindAll this, "render", "hover"
   
   render: ->
-    $(@el).html window.JST['partials/comment'](@model.toJSON())
+    $(@el).html window.JST['comment'](@model.toJSON())
     this   
     
   hover: ->

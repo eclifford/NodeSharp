@@ -1,7 +1,10 @@
 (function() {
   var CommentSchema, Schema, mongoose;
+
   mongoose = require('mongoose');
+
   Schema = mongoose.Schema;
+
   CommentSchema = new Schema({
     body: String,
     user: {
@@ -17,5 +20,7 @@
       "default": Date.now()
     }
   });
+
   module.exports.CommentSchema = CommentSchema;
+
 }).call(this);

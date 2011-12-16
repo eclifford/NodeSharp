@@ -1,5 +1,5 @@
 module.exports = (app) ->
   app.get "/", (req, res) ->
     res.render "index",
-      title: "Redbull Video Demo"
-        
+      title: "Redbull Video Demo!"
+ 
