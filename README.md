@@ -4,6 +4,43 @@ NodeSharp is a boilerplate project aimed at providing a series of best practices
 
 My goal with this project was to use as many new technologies as possible to make the barrier of entry so high that only I would ever use it.
 
+# Project Structure
+Below is the app folder structure. 
+	/app
+		/lib                   # Compiled version of /src
+		/src
+			client
+				/controllers       # Client controllers/routes
+				/models            # Backbone models/collections
+				/templates         # Jade client templates
+				/test              # Jasmine Tests
+				/views             # Backbone Views
+				app.coffee         # Client namespace allocation / app startup
+			server
+				/controllers       # Express routes
+				/models						 # Mongoose Schemas
+				/modules					 # Internal Libraries
+				/tests             # Should & Vows tests
+				/views             # Jade server templates
+				server.coffee      # Node server
+				settings.coffee    # Server settings
+	/doc
+		/
+	/logs
+		master.log
+		workers.access.log
+		workers.error.log
+	/public            
+		/assets                # Compiled assets for client
+		/images
+		/javascripts
+			/vendor              # JS files compiled into /assets/vendor.js
+		/stylesheets
+			/stylus              # Stylus files compiled into /assets/all.css
+			/vendor              # Css files compiled into /assets/all.css
+	Cakefile                 # Packaging scripts / testrunner
+	server.js                # Entry point into the app
+
 # Features
 
 * Server: [node.js](http://nodejs.org/) 
