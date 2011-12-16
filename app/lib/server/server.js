@@ -29,7 +29,7 @@
     bootApplication(app, path);
     bootControllers(app);
     bootDepedencies(app);
-    return app.listen(settings.port);
+    return cluster(app).set('workers', 1).use(cluster.logger('logs', 'debug')).use(cluster.debug()).listen(3000);
   };
 
   bootApplication = function(app, path) {
@@ -48,11 +48,6 @@
       }));
       app.use(everyauth.middleware());
       app.use(express.logger());
-      app.use(stylus.middleware({
-        src: require('path').join(__dirname, '../../public/stylesheets/stylus'),
-        dest: require('path').join(__dirname, '../../public/stylesheets'),
-        debug: true
-      }));
       app.use(express.static(settings.publicDir, {
         maxage: settings.staticMaxAge
       }));

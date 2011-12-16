@@ -1,25 +1,46 @@
 # Overview
 
-This is a personal project to stich together some common tools when building NodeJS applications. 
+NodeSharp is a boilerplate project aimed at providing a series of best practices in how to architect a sophisticated client/server web application.
 
-This setup is heavily inspired by [this project](https://github.com/brikis98/node-backbone-skeleton). 
+My goal with this project was to use as many new technologies as possible to make the barrier of entry so high that only I would ever use it.
+
+# Features
+
+* Server: [node.js](http://nodejs.org/) 
+* MVC Server Framework: [express](http://nodejs.org/) 
+* MVC Cient Framework: [backbone](http://documentcloud.github.com/backbone/)
+* Database: [mongodb](http://www.mongodb.org/
+* Database ODM: [mongooose](http://mongoosejs.com/)
+* Multi-Core Optimization: [cluster](http://learnboost.github.com/cluster/)
+* Authentication: [everyauth](https://github.com/bnoguchi/everyauth)
+* Stylesheets: [Stylus](http://learnboost.github.com/stylus/)
+* Server Templates: [Jade](http://jade-lang.com/)
+* Client Templates: [Jade](http://jade-lang.com/)
+* Preprocessor: [CoffeeScript](http://jashkenas.github.com/coffee-script/)
+* Config [node-settings](https://github.com/mgutz/node-settings)
+* Server-side Testing: [should](https://github.com/visionmedia/should.js) + [vows](http://vowsjs.org/)
+* Client-side Testing [jasmine](http://pivotal.github.com/jasmine/) + [jasmine-jquery](https://github.com/velesin/jasmine-jquery)
+* Auto compilation/packaging of CoffeeScript, Jade, Stylus, JS, CSS
 
 # Installation
 
-1. `bundle install`
 1. `npm install -d`
 1. `NODE_ENV=development nodemon bootstrap.js` or `NODE_ENV=development node` bootstrap.js'
 1. Go to http://localhost:3000
 
-# Technologies
+# Enabling Auto commpilation 
+To Enable auto compilation/packaging of assets open a seperate terminal window and start the cake watch task. Note that you must restart it currently upon the addition of new files(I'll fix this shortly).
 
-* Server: [node.js](http://nodejs.org/) + [express](http://expressjs.com/)
-* Client-side MVC: [backbone.js](http://documentcloud.github.com/backbone/)
-* Templating: [underscore.js](http://documentcloud.github.com/underscore/)
-* Preprocessor: [CoffeeScript](http://jashkenas.github.com/coffee-script)
-* Client-side library: [jQuery](http://jquery.com/)
-* Stylesheets: [Compass](http://compass-style.org/) and [SASS](http://sass-lang.com/)
-* Config: [node-settings](https://github.com/mgutz/node-settings)
+1. `cake watch`
+
+# Notes
+* Facebook login in the example won't work unless you change out keys and point to your own app(which accepts localhost)
+
+# Live Example
+You can see the demo app running live at
+http://thevideowar.no.de
+
+
 
 
 
