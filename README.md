@@ -64,7 +64,7 @@ Below is the app folder structure.
 # Installation
 
 1. `npm install -d`
-1. `NODE_ENV=development nodemon bootstrap.js` or `NODE_ENV=development node` bootstrap.js'
+1. `NODE_ENV=development nodemon server.js` or `NODE_ENV=development node server.js`
 1. Go to http://localhost:3000
 
 # Enabling Auto commpilation 
@@ -74,6 +74,8 @@ To Enable auto compilation/packaging of assets open a seperate terminal window a
 
 # Notes
 * Facebook login in the example won't work unless you change out keys and point to your own app(which accepts localhost)
+* I don't have full examples of the testing working yet.. just hooks
+
 
 # Live Example
 You can see the demo app running live at
