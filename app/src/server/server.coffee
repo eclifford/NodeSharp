@@ -5,7 +5,6 @@ everyauth   = require 'everyauth'
 Settings    = require 'settings'
 settings    = new Settings("#{__dirname}/settings").getEnvironment()
 UserManager = require './models/userManager'
-nap         = require 'nap'  
 facebook    = require './modules/auth/facebook'
 stylus      = require 'stylus'
 path        = require 'path'

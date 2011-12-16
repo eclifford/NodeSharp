@@ -1,5 +1,5 @@
 (function() {
-  var Settings, UserManager, bootApplication, bootControllers, bootDepedencies, cluster, everyauth, express, facebook, fs, nap, path, settings, stylus;
+  var Settings, UserManager, bootApplication, bootControllers, bootDepedencies, cluster, everyauth, express, facebook, fs, path, settings, stylus;
 
   fs = require('fs');
 
@@ -14,8 +14,6 @@
   settings = new Settings("" + __dirname + "/settings").getEnvironment();
 
   UserManager = require('./models/userManager');
-
-  nap = require('nap');
 
   facebook = require('./modules/auth/facebook');
 
